@@ -7,6 +7,7 @@
       <div class="wrap">
         <scroller :scrollerTitle="vTitle" :itemList="vList"></scroller>
       </div>
+      <div :style="{textAlign:'center', marginTop:'10px', fontWeight:'700'}">{{`Selected Item: ${selectedItem.name}, value is ${selectedItem.value}`}}</div>
     </section>
   </article>
 </template>
@@ -37,6 +38,11 @@ export default {
   },
   methods: {
     goBack: goBack
+  },
+  computed: {
+    selectedItem: function () {
+      return this.vList.find(item => item.selected)
+    }
   }
 }
 </script>
