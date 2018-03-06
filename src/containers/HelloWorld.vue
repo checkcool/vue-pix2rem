@@ -1,11 +1,11 @@
 <template>
-  <div class="pageview">
+  <article class="pageview">
     <header class="header fixed">
       <div class="container"><a class="back back_ico" href="javascript:void(0);" @click="goBack"></a><span class="title">{{msg}}</span></div>
     </header>
     <section class="main">
       <ul>
-        <li>2015年习近平点“经”之语：抓创新就是抓发展</li>
+        <li><router-link to="one-scroller">One Scroller</router-link></li>
         <li>重温前两年习近平新年贺词：“人民”是高频词</li>
         <li>总理力推 新经济迎来哪些机遇？ 世界舆论看好中国</li>
         <li>明起这些新规将影响你我：全面二孩正式实施</li>
@@ -14,7 +14,7 @@
         <li>广东佛山土豪村分红：6口之家可分到200万(图)</li>
       </ul>
     </section>
-  </div>
+  </article>
 </template>
 
 <script>
