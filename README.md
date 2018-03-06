@@ -1,6 +1,6 @@
 # vue-pix2rem
 
-> A Vue.js boilerplate project
+> A Vue.js boilerplate project for mobile SPA with SASS & REM
 
 ## Build Setup
 
