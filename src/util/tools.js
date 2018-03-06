@@ -74,9 +74,6 @@ export const isMobileNumber = function (val) {
  */
 export const goBack = function () {
   window.history.go(-1);
-  setTimeout(function () {
-    window.location.href = "/";
-  }, 500);
 }
 
 /**

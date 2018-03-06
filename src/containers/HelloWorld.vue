@@ -1,7 +1,7 @@
 <template>
   <article class="pageview">
     <header class="header fixed">
-      <div class="container"><a class="back back_ico" href="javascript:void(0);" @click="goBack"></a><span class="title">{{msg}}</span></div>
+      <div class="container"><span class="title">{{msg}}</span></div>
     </header>
     <section class="main">
       <ul>
@@ -18,16 +18,12 @@
 </template>
 
 <script>
-import {goBack} from '../util/tools'
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Hello World'
     }
-  },
-  methods: {
-    goBack: goBack
   }
 }
 </script>
@@ -36,10 +32,6 @@ export default {
 <style lang="scss" scoped>
   @import '../style/pix2rem/index';
   .main {
-    max-width:$mockup_width_px;
-    margin:0 auto;
-    padding-top: r(100);
-
     ul, li {
       list-style: decimal;
     }

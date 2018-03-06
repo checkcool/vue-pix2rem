@@ -1,11 +1,19 @@
 <template>
-  <div class="wrap">
-    <scroller :scrollerTitle="vTitle" :itemList="vList"></scroller>
-  </div>
+  <article class="pageview">
+    <header class="header fixed">
+      <div class="container"><a class="back back_ico" href="javascript:void(0);" @click="goBack"></a><span class="title">{{msg}}</span></div>
+    </header>
+    <section class="main">
+      <div class="wrap">
+        <scroller :scrollerTitle="vTitle" :itemList="vList"></scroller>
+      </div>
+    </section>
+  </article>
 </template>
 
 <script>
 import Scroller from '../components/Scroller'
+import {goBack} from '../util/tools'
 export default {
   name: 'OneScroller',
   data () {
@@ -20,11 +28,15 @@ export default {
         { value: 7, name: 'item 7', selected: false },
         { value: 8, name: 'item 8', selected: false }
       ],
-      vTitle: 'List Title'
+      vTitle: 'List Title',
+      msg: 'One Scroller'
     }
   },
   components: {
     Scroller
+  },
+  methods: {
+    goBack: goBack
   }
 }
 </script>
